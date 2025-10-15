@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application - Dasofeng School for Techies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .application-container {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .application-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .application-header h2 {
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .application-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .form-section h3 {
+            color: var(--primary-teal);
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <h1>Dasofeng School for Techies</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn">Login</button>
+                <button class="btn btn-primary" id="applyBtn" style="display: none;">Apply Now</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="application-container">
+            <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            
+            <div class="application-header">
+                <h2>Application Form</h2>
+                <p>Complete this form to apply for our data programs. We'll review your application and 
+                    contact you about the next steps.</p>
+            </div>
+            
+            <form class="application-form" id="applicationForm">
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address">
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Program Selection</h3>
+                    <div class="form-group">
+                        <label for="course">Select Your Preferred Program *</label>
+                        <select id="course" required>
+                            <option value="">Choose a program</option>
+                            <option value="data-analytics">Data Analytics</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="data-engineering">Data Engineering</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Preferred Start Date *</label>
+                        <select id="startDate" required>
+                            <option value="">Select start date</option>
+                            <option value="january">January 2024</option>
+                            <option value="april">April 2024</option>
+                            <option value="july">July 2024</option>
+                            <option value="october">October 2024</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Background & Experience</h3>
+                    <div class="form-group">
+                        <label for="education">Highest Education Level *</label>
+                        <select id="education" required>
+                            <option value="">Select education level</option>
+                            <option value="high-school">High School</option>
+                            <option value="associate">Associate Degree</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="phd">PhD</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Previous Experience with Data/Programming</label>
+                        <textarea id="experience" placeholder="Describe any previous experience with data analysis, programming, or related fields..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivation">Why are you interested in this program? *</label>
+                        <textarea id="motivation" required placeholder="Tell us about your motivation for applying and your career goals..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Additional Information</h3>
+                    <div class="form-group">
+                        <label for="howHeard">How did you hear about us?</label>
+                        <select id="howHeard">
+                            <option value="">Select an option</option>
+                            <option value="search-engine">Search Engine</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="friend">Friend/Colleague</option>
+                            <option value="event">Event/Conference</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Any questions for us?</label>
+                        <textarea id="questions" placeholder="If you have any questions, please include them here..."></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Submit Application</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Dasofeng School</h3>
+                <p>Empowering the next generation of data professionals through comprehensive education and hands-on experience.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#about">About Us</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Data Street, Tech City</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> info@dasofeng.edu</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Dasofeng School for Techies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Student Login</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="studentEmail">Email Address</label>
+                    <input type="email" id="studentEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login to Dashboard</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    
+    <!-- APPLICATION FORM SCRIPT -->
+<script>
+    // ULTRA-CLEAN STUDENT VERSION (No console logs)
+    const applicationForm = document.getElementById('applicationForm');
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyUuIqGoHStWioqBWmDpK8dsmRJoFQlmIPPc7zYV9UuvdV0T1kpV8pT1oZMwXFer9Tw-A/exec';
+
+    if (applicationForm) {
+        applicationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = applicationForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                course: document.getElementById('course').value,
+                startDate: document.getElementById('startDate').value,
+                education: document.getElementById('education').value,
+                experience: document.getElementById('experience').value || '',
+                motivation: document.getElementById('motivation').value,
+                howHeard: document.getElementById('howHeard').value || '',
+                questions: document.getElementById('questions').value || '',
+                submittedAt: new Date().toISOString()
+            };
+            
+            // Save to localStorage as backup (completely silent)
+            try {
+                const applications = JSON.parse(localStorage.getItem('dasofengApplications') || '[]');
+                applications.push({
+                    ...formData,
+                    id: Date.now() + Math.random().toString(36).substr(2, 9)
+                });
+                localStorage.setItem('dasofengApplications', JSON.stringify(applications));
+            } catch (error) {
+                // Silent fail
+            }
+            
+            // Submit to Google Sheets (completely silent)
+            const { id, ...dataToSend } = formData;
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dataToSend)
+            }).catch(() => {}); // Silent catch
+            
+            // Show success and redirect
+            alert('✅ Application submitted successfully!\n\nThank you for applying to Dasofeng School for Techies.\n\nYou will now be redirected to the entry exam.');
+            
+            setTimeout(() => {
+                window.location.href = `exam.html?course=${formData.course}`;
+            }, 2000);
+            
+            // Reset button
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 3000);
+        });
+    }
+</script>
+</body>
+</html>

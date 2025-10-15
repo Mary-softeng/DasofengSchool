@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Dasofeng School for Techies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .course-detail {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .course-hero {
+            background: linear-gradient(135deg, var(--primary-teal), var(--dark-teal));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .course-hero i {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .course-modules {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .module {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .module h3 {
+            color: var(--primary-teal);
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <h1>Dasofeng School for Techies</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn">Login</button>
+                <button class="btn btn-primary" id="applyBtn">Apply Now</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="course-detail">
+            <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            
+            <!-- Data Analytics Course -->
+            <section id="analytics" class="course-section">
+                <div class="course-hero">
+                    <i class="fas fa-chart-bar"></i>
+                    <h2>Data Analytics</h2>
+                    <p>Transform raw data into actionable insights</p>
+                </div>
+                
+                <div class="course-content">
+                    <h3>Course Overview</h3>
+                    <p>Our Data Analytics program equips you with the skills to collect, process, and analyze data to drive business decisions. You'll learn to work with real-world datasets and create compelling visualizations that tell data-driven stories.</p>
+                    
+                    <h3>What You'll Learn</h3>
+                    <div class="course-modules">
+                        <div class="module">
+                            <h3>Module 1: Foundations of Data Analysis</h3>
+                            <p>Introduction to data analytics, statistical concepts, and data types</p>
+                        </div>
+                        <div class="module">
+                            <h3>Module 2: SQL for Data Analysis</h3>
+                            <p>Database fundamentals, querying, and data manipulation with SQL</p>
+                        </div>
+                        <div class="module">
+                            <h3>Module 3: Data Visualization</h3>
+                            <p>Creating effective charts, dashboards, and reports with Tableau and Power BI</p>
+                        </div>
+                        <div class="module">
+                            <h3>Module 4: Python for Data Analysis</h3>
+                            <p>Data manipulation with Pandas, visualization with Matplotlib and Seaborn</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="application.html" class="btn btn-primary">Apply for This Course</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Data Science Course -->
+            <section id="science" class="course-section" style="margin-top: 5rem;">
+                <div class="course-hero">
+                    <i class="fas fa-brain"></i>
+                    <h2>Data Science</h2>
+                    <p>Build intelligent systems with machine learning</p>
+                </div>
+                
+                <div class="course-content">
+                    <h3>Course Overview</h3>
+                    <p>Our Data Science program takes you beyond analytics into predictive modeling and machine learning. You'll learn to build, train, and deploy models that can make predictions and automate decision-making processes.</p>
+                    
+                    <h3>What You'll Learn</h3>
+                    <div class="course-modules">
+                        <div class="module">
+                            <h3>Module 1: Python for Data Science</h3>
+                            <p>Advanced Python, NumPy, Pandas, and data preprocessing techniques</p>
+                        </div>
+                        <div class="module">
+                            <h3>Module 2: Statistical Modeling</h3>
+                            <p>Probability, inference, regression, and hypothesis testing</p>
+                        </div>
+                        <div class="module">
+                            <h3>Module 3: Machine Learning Fundamentals</h3>
+                            <p>Supervised and unsupervised learning algorithms, model evaluation</p>
+                        </div>
+                        <div class="module">
+                            <h3>Module 4: Advanced ML & Deployment</h3>
+                            <p>Neural networks, deep learning, and model deployment strategies</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="application.html" class="btn btn-primary">Apply for This Course</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Data Engineering Course -->
+            <section id="engineering" class="course-section" style="margin-top: 5rem;">
+                <div class="course-hero">
+                    <i class="fas fa-database"></i>
+                    <h2>Data Engineering</h2>
+                    <p>Build robust data infrastructure and pipelines</p>
+                </div>
+                
+                <div class="course-content">
+                    <h3>Course Overview</h3>
+                    <p>Our Data Engineering program focuses on the infrastructure and pipelines that enable data analysis and science. You'll learn to design, build, and maintain systems that handle data at scale.</p>
+                    
+                    <h3>What You'll Learn</h3>
+                    <div class="course-modules">
+                        <div class="module">
+                            <h3>Module 1: Data Systems Fundamentals</h3>
+                            <p>Database design, data modeling, and ETL processes</p>
+                        </div>
+                        <div class="module">
+                            <h3>Module 2: Big Data Technologies</h3>
+                            <p>Hadoop, Spark, and distributed computing principles</p>
+                        </div>
+                        <div class="module">
+                            <h3>Module 3: Data Pipeline Development</h3>
+                            <p>Building scalable data pipelines with Airflow and similar tools</p>
+                        </div>
+                        <div class="module">
+                            <h3>Module 4: Cloud Data Platforms</h3>
+                            <p>AWS, Azure, and GCP data services and architecture</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="application.html" class="btn btn-primary">Apply for This Course</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Dasofeng School</h3>
+                <p>Empowering the next generation of data professionals through comprehensive education and hands-on experience.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#about">About Us</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Data Street, Tech City</li>
+                    <li><i class="fas fa-phone"></i> +254 797269136</li>
+                    <li><i class="fas fa-envelope"></i> info@dasofeng.edu</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Dasofeng School for Techies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Student Login</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="studentEmail">Email Address</label>
+                    <input type="email" id="studentEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login to Dashboard</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

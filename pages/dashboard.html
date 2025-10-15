@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Dasofeng School for Techies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <h1>Dasofeng School for Techies</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="logoutBtn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="dashboard">
+            <div class="dashboard-header">
+                <h2>Student Dashboard</h2>
+                <div class="user-info">
+                    <span id="userEmail">student@dasofeng.edu</span>
+                    <div class="progress-indicator">
+                        <span>Course Progress: 40%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-nav">
+                <ul>
+                    <li><a href="#" class="active" data-tab="modules">My Modules</a></li>
+                    <li><a href="#" data-tab="assignments">Assignments</a></li>
+                    <li><a href="#" data-tab="progress">Progress</a></li>
+                    <li><a href="#" data-tab="resources">Resources</a></li>
+                </ul>
+            </div>
+            
+            <div class="dashboard-content">
+                <!-- Modules Tab -->
+                <div class="tab-content active" id="modulesTab">
+                    <h3>Course Modules</h3>
+                    <p class="tab-description">Complete each module sequentially to progress through the course.</p>
+                    
+                    <div class="module-card">
+                        <div class="module-info">
+                            <h3>Module 1: Introduction to Data Analytics</h3>
+                            <p>Learn the fundamentals of data analysis and visualization</p>
+                            <div class="module-meta">
+                                <span><i class="fas fa-book"></i> 12 Lessons</span>
+                                <span><i class="fas fa-clock"></i> 8 Hours</span>
+                                <span><i class="fas fa-tasks"></i> 3 Assignments</span>
+                            </div>
+                        </div>
+                        <div class="module-status status-completed">Completed</div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary">Review</button>
+                        </div>
+                    </div>
+                    
+                    <div class="module-card">
+                        <div class="module-info">
+                            <h3>Module 2: SQL for Data Analysis</h3>
+                            <p>Master SQL queries for extracting and manipulating data</p>
+                            <div class="module-meta">
+                                <span><i class="fas fa-book"></i> 15 Lessons</span>
+                                <span><i class="fas fa-clock"></i> 10 Hours</span>
+                                <span><i class="fas fa-tasks"></i> 4 Assignments</span>
+                            </div>
+                        </div>
+                        <div class="module-status status-current">Current Module</div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary">Continue</button>
+                        </div>
+                    </div>
+                    
+                    <div class="module-card">
+                        <div class="module-info">
+                            <h3>Module 3: Python for Data Analysis</h3>
+                            <p>Use Python libraries like Pandas and NumPy for data manipulation</p>
+                            <div class="module-meta">
+                                <span><i class="fas fa-book"></i> 18 Lessons</span>
+                                <span><i class="fas fa-clock"></i> 12 Hours</span>
+                                <span><i class="fas fa-tasks"></i> 5 Assignments</span>
+                            </div>
+                        </div>
+                        <div class="module-status status-locked">Locked</div>
+                        <div class="module-actions">
+                            <button class="btn btn-outline" disabled>Start</button>
+                        </div>
+                    </div>
+                    
+                    <div class="module-card">
+                        <div class="module-info">
+                            <h3>Module 4: Data Visualization</h3>
+                            <p>Create compelling visualizations with Tableau and Matplotlib</p>
+                            <div class="module-meta">
+                                <span><i class="fas fa-book"></i> 14 Lessons</span>
+                                <span><i class="fas fa-clock"></i> 9 Hours</span>
+                                <span><i class="fas fa-tasks"></i> 3 Assignments</span>
+                            </div>
+                        </div>
+                        <div class="module-status status-locked">Locked</div>
+                        <div class="module-actions">
+                            <button class="btn btn-outline" disabled>Start</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Assignments Tab -->
+                <div class="tab-content" id="assignmentsTab">
+                    <h3>My Assignments</h3>
+                    <p class="tab-description">View and submit your course assignments.</p>
+                    
+                    <div class="assignment-card">
+                        <div class="assignment-info">
+                            <h3>Assignment 1: Data Cleaning Exercise</h3>
+                            <p>Clean and prepare a dataset for analysis</p>
+                            <div class="assignment-meta">
+                                <span><i class="fas fa-calendar"></i> Due: Oct 15, 2023</span>
+                                <span><i class="fas fa-weight"></i> Weight: 10%</span>
+                            </div>
+                        </div>
+                        <div class="assignment-status status-submitted">
+                            <span>Submitted</span>
+                            <span class="grade">Grade: 85/100</span>
+                        </div>
+                        <div class="assignment-actions">
+                            <button class="btn btn-primary">View Feedback</button>
+                        </div>
+                    </div>
+                    
+                    <div class="assignment-card">
+                        <div class="assignment-info">
+                            <h3>Assignment 2: SQL Queries</h3>
+                            <p>Write complex SQL queries to extract insights from a database</p>
+                            <div class="assignment-meta">
+                                <span><i class="fas fa-calendar"></i> Due: Oct 25, 2023</span>
+                                <span><i class="fas fa-weight"></i> Weight: 15%</span>
+                            </div>
+                        </div>
+                        <div class="assignment-status status-pending">
+                            <span>Pending Submission</span>
+                        </div>
+                        <div class="assignment-actions">
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="assignment-card">
+                        <div class="assignment-info">
+                            <h3>Assignment 3: Data Visualization Project</h3>
+                            <p>Create a dashboard to visualize key business metrics</p>
+                            <div class="assignment-meta">
+                                <span><i class="fas fa-calendar"></i> Due: Nov 5, 2023</span>
+                                <span><i class="fas fa-weight"></i> Weight: 20%</span>
+                            </div>
+                        </div>
+                        <div class="assignment-status status-locked">
+                            <span>Locked</span>
+                        </div>
+                        <div class="assignment-actions">
+                            <button class="btn btn-outline" disabled>Start</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Progress Tab -->
+                <div class="tab-content" id="progressTab">
+                    <h3>Course Progress</h3>
+                    <p class="tab-description">Track your progress through the course.</p>
+                    
+                    <div class="progress-overview">
+                        <div class="progress-card">
+                            <h4>Overall Progress</h4>
+                            <div class="progress-circle">
+                                <div class="circle" data-percent="40">
+                                    <span>40%</span>
+                                </div>
+                            </div>
+                            <p>You've completed 2 of 5 modules</p>
+                        </div>
+                        
+                        <div class="progress-stats">
+                            <div class="stat">
+                                <h4>Modules Completed</h4>
+                                <span class="stat-value">2/5</span>
+                            </div>
+                            <div class="stat">
+                                <h4>Assignments Submitted</h4>
+                                <span class="stat-value">1/3</span>
+                            </div>
+                            <div class="stat">
+                                <h4>Average Grade</h4>
+                                <span class="stat-value">85%</span>
+                            </div>
+                            <div class="stat">
+                                <h4>Time Spent</h4>
+                                <span class="stat-value">18h 30m</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-details">
+                        <h4>Module Progress</h4>
+                        <div class="module-progress">
+                            <div class="progress-item">
+                                <span class="progress-label">Module 1: Introduction to Data Analytics</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%;"></div>
+                                </div>
+                                <span class="progress-percent">100%</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Module 2: SQL for Data Analysis</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%;"></div>
+                                </div>
+                                <span class="progress-percent">60%</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Module 3: Python for Data Analysis</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%;"></div>
+                                </div>
+                                <span class="progress-percent">0%</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Module 4: Data Visualization</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%;"></div>
+                                </div>
+                                <span class="progress-percent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resources Tab -->
+                <div class="tab-content" id="resourcesTab">
+                    <h3>Learning Resources</h3>
+                    <p class="tab-description">Additional materials to support your learning.</p>
+                    
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4>Course Textbook</h4>
+                            <p>Complete digital textbook for the Data Analytics program</p>
+                            <button class="btn btn-primary">Download</button>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h4>Video Tutorials</h4>
+                            <p>Additional video explanations of complex topics</p>
+                            <button class="btn btn-primary">Watch</button>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Code Examples</h4>
+                            <p>Sample code and projects for hands-on practice</p>
+                            <button class="btn btn-primary">Download</button>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Study Groups</h4>
+                            <p>Connect with fellow students for collaborative learning</p>
+                            <button class="btn btn-primary">Join</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Dasofeng School</h3>
+                <p>Empowering the next generation of data professionals through comprehensive education and hands-on experience.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#about">About Us</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Data Street, Tech City</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> info@dasofeng.edu</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Dasofeng School for Techies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
